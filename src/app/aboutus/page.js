@@ -1,4 +1,6 @@
-import Image from "next/image";
+
+
+    import Image from "next/image";
 
 
 export default function Home () {
@@ -9,9 +11,7 @@ export default function Home () {
 <h1  className="text-4xl" >
 
 
-  welcome  to my portfolio</h1>
+  welcome to my about us page</h1>
 </main>
 
   )}
-
- 

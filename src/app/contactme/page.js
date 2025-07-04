@@ -9,9 +9,7 @@ export default function Home () {
 <h1  className="text-4xl" >
 
 
-  welcome  to my portfolio</h1>
+  please contact me</h1>
 </main>
 
   )}
-
- 

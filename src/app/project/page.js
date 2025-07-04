@@ -6,12 +6,11 @@ export default function Home () {
 <main className="text-center p-4" >
 
 
+
 <h1  className="text-4xl" >
 
 
-  welcome  to my portfolio</h1>
+  welcome to my project</h1>
 </main>
 
   )}
-
- 
