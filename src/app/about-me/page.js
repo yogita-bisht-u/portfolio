@@ -2,48 +2,46 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <main className="py-10 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="md:flex bg-white shadow-xl rounded-3xl overflow-hidden">
-          <div className="md:w-1/3 relative">
+    <main className="min-h-screen flex items-center justify-center px-4 py-16 bg-gradient-to-br from-[var(--background)] via-[var(--primary)]/10 to-[var(--background)]">
+      <div className="w-full max-w-4xl rounded-3xl shadow-2xl p-0 md:p-1 bg-white/70 dark:bg-[var(--background)]/80 backdrop-blur-md border border-[var(--border)]">
+        <div className="flex flex-col md:flex-row items-center gap-10 p-8 md:p-12">
+          {/* Profile Image - Keep as is */}
+          <div className="relative w-full md:w-96 h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-lg border-2 border-[var(--primary)] bg-[var(--background)]">
             <Image
-              src="/image.jpeg"
-              alt="Yogita Bisht"
-              width={400}
-              height={500}
-              className="object-cover rounded-tl-3xl rounded-bl-3xl"
+              src="/yogita.jpg"
+              alt="yogita bisht"
+              fill
+              className="object-cover"
+              priority
             />
           </div>
-          <div className="md:w-2/3 p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Yogita Bisht
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              A passionate Full Stack Developer Intern who enjoys crafting seamless
-              web solutions. I build modern interfaces using tools like React,
-              Tailwind and handle backend logic with PHP, Node.js. I value clean
-              code, performance, and user experience.
+
+          {/* About Content */}
+          <div className="flex-1 space-y-6 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[var(--primary)] leading-tight drop-shadow-sm">
+              👋 Hi, I'm Yogita Bisht
+            </h1>
+            <p className="text-base md:text-lg text-[var(--secondary)] leading-relaxed">
+              A passionate <strong>Full Stack Developer Intern</strong> who enjoys
+              crafting seamless web solutions. I build modern interfaces using tools
+              like <strong>React, Tailwind</strong> and handle backend logic with
+              <strong> PHP, Node.js</strong>. I value clean code, performance, and
+              user experience.
             </p>
+            <div className="border-l-4 border-[var(--accent)] bg-[var(--accent)]/10 px-4 py-3 rounded-md">
+              <p className="text-sm italic text-[var(--foreground)]">
+                “I turn ideas into reality — one line of code at a time.”
+              </p>
+            </div>
             <div>
-              <h3 className="text-lg font-semibold text-blue-600 mb-3">
+              <h2 className="text-lg font-semibold text-[var(--primary)] mb-3">
                 Tech Stack
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "HTML",
-                  "CSS",
-                  "Tailwind",
-                  "Bootstrap",
-                  "PHP",
-                  "WordPress",
-                  "React",
-                  "Node.js",
-                  "JavaScript",
-                  "MySQL",
-                ].map((skill) => (
+              </h2>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {["HTML", "CSS", "Tailwind", "Bootstrap", "PHP", "WordPress", "React", "Node.js", "JavaScript", "MySQL"].map((skill) => (
                   <span
                     key={skill}
-                    className="bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-medium hover:bg-blue-200 transition duration-200"
+                    className="px-3 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)] rounded-full text-xs font-medium text-[var(--foreground)] transition-all hover:bg-[var(--primary)]/30 hover:scale-105 shadow-sm"
                   >
                     {skill}
                   </span>
